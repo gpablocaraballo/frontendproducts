@@ -1,0 +1,5 @@
+export const APP_ACTIONS = {
+  SET_PRODUCT: 'SET_PRODUCT',
+  SET_PRODUCT_LIST: 'SET_PRODUCT_LIST',
+};
+export default { APP_ACTIONS };
