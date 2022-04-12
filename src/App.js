@@ -32,7 +32,7 @@ function App() {
                 (
                   <AppLayout>
                     <ProductSearch />
-                    <ProductList items={state.products} />
+                    <ProductList />
                   </AppLayout>
                 )
               }

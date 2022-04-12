@@ -2,17 +2,25 @@
 # Demo de productos Pablo Caraballo
 react + react context (de react hooks) + styled component + axios + debounce + lodash
 
-_sitio activo:_ 
-_https://xx/_
+_sitio frontend activo:_ 
+_https://frontendproducts-developergit001.vercel.app/_
+
+_repo frontend:_ 
+_https://github.com/gpablocaraballo/frontendproducts_
+
+#############################################################
+
+_backend activo:_ 
+_https://nodegraphqlproducts-developergit001.vercel.app/api/items?q=xx_
 
 _repo backend:_ 
 _https://github.com/gpablocaraballo/nodegraphqlproducts_
 
-_backend activo:_ 
-_https://nodegraphqlproducts.vercel.app/api/xx_
+### VARIABLES DE ENTORNO
+
+_Se puede verificar las url y puertos (se podrian cambiar por otro) en el archivo .env _
 
 ### INSTRUCTIONS STEPS 📋
-
 
 _1 . Install the dependencies_
 
@@ -30,17 +38,16 @@ npm run start
 
 _Pagina principal_
 ```
-    App.js (contiene el context provider y los componentes pedidos DisplayComponent y ControlsComponent)
+    App.js (contiene el context provider, el Route y los componentes principales)
 ```
 ```
 _Componentes principales_
 
 ```
-    _AppLayout: Componente general, cuyo comportamiento solo agrega el <Header /> con el logo general para ir a la home_
+    _AppLayout: Componente general, cuyo comportamiento solo agrega el <Header /> con el logo general para ir a la HOME_
+    _Header: Componente siempre visible donde tiene el Logo de la App (con un efecto) y se puede hacer click para volver a la HOME_
 
-    _Header: Componente donde tiene el Logo de la App y se puede hacer click para volver a la HOME_
-
-    _ProductSearch: Componente que realiza la peticion ajax para filtrar los productos y setearlos en el reducer haciendo un dispatch, redirecciona a /items como se pidió. A tener en cuenta: este componente siempre esta visible, para no dejarlo en algunos lugares si y en otros no, decidí dejarlo visible en todos_
+    _ProductSearch: Componente que realiza la peticion ajax para filtrar los productos y setearlos en el reducer haciendo un dispatch, redirecciona a /items?search=xx como se pidió. A tener en cuenta: este componente siempre esta visible, para no dejarlo en algunos lugares si y en otros no, decidí dejarlo visible en todos_
 
     _ProductList: Muestra un listado que tiene a cada item de producto con su respectivo comportamiento y muestra los datos (name, price, image), al hacer click, dispara el dispatch para que el reducer setee el producto seleccionado en base al action y redirige al detalle (a items/xx como se pidió, en esta instancia no se vuelve a ejecutar un ajax pidiendo el producto by id, ya que lo tenemos en memoria con el uso de react context)._
 

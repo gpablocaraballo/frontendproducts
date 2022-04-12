@@ -74,7 +74,7 @@ export default function ProductSearch() {
 
   return (
     <Container>
-      <SearchInput type="text" onChange={onNameFilterChange} value={filteredText} loading={loading ? 1 : 0} />
+      <SearchInput type="text" placeholder="Type name or description" onChange={onNameFilterChange} value={filteredText} loading={loading ? 1 : 0} />
       {isFilled(filteredText) && <CleanButton src={ResetIcon} alt="Clean text" onClick={onCleanField} />}
     </Container>
   );

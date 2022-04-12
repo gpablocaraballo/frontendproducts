@@ -8,20 +8,23 @@ import {
   LabelBox,
 } from '../Common.styled';
 import Item from './Item';
+import { useAppContext } from '../../libs/context-lib';
 
-export default function ProductList({ items }) {
+export default function ProductList() {
+  const { state } = useAppContext();
+
   return (
     <Container>
       <ProductContainer>
         <ListContainer>
-          {(items && items.length > 0) ? (
+          {(state.products && state.products.length > 0) ? (
             <>
-              {items.map((row) => (
+              {state.products.map((row) => (
                 <Item key={row.id} item={row} />
               ))}
             </>
-          ) : (items
-              && items.length === 0) && <LabelBox>No items found.</LabelBox>}
+          ) : (state.products
+              && state.products.length === 0) && <LabelBox>No items found.</LabelBox>}
         </ListContainer>
       </ProductContainer>
     </Container>
